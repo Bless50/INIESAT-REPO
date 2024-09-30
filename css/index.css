@@ -12,7 +12,6 @@ body {
     padding: 0;
     background-color:#FFFFFF ;
     color: #666;
-    text-align: justify;
 }
 
 /* the styles below are for the navbar section */
@@ -167,15 +166,6 @@ p{
 
 /* style for the about us page */
 /* the style below are to work for the entire body of the page*/
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #FFFFFF;
-  color: #666;
-  text-align: justify;
-  font-size: 17px;
-}
 
 /* the styles below are for the navbar section */
 /* css style for hover effect for the links  */
