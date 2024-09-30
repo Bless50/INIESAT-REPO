@@ -418,7 +418,7 @@
         <textarea id="message" class="form-control" style="height: 170px;" required></textarea>
       </div>
       <div class="form-group col-12 col-lg-6 offset-lg-3 mb-3 mt-4">
-        <button type="submit" onclick="sendToWhatappNumber()" class="btn btn-block text-white mb-5 btn-hover" style="background-color: #DF5E5E;">
+        <button type="submit" onclick="sendToWhatappNumber(event)" class="btn btn-block text-white mb-5 btn-hover" style="background-color: #DF5E5E;">
           Send
           Message
         </button>
@@ -525,21 +525,25 @@
       console.log("Current page:", currentPage); // For debugging
     });
     
-    // to send the form data to whatapp
-    function sendToWhatappNumber(){
+    
+    // Send the form data to WhatsApp
+  function sendToWhatappNumber(event) {
+    event.preventDefault(); // Prevent the form from reloading the page
 
-      let number = "+237682348347";
-      let name = document.getElementById('name').value;
-      let email = document.getElementById('email').value;
-      let message = document.getElementById('message').value;
+    let number = "+237682348347"; // WhatsApp number in international format
+    let name = encodeURIComponent(document.getElementById('name').value);
+    let email = encodeURIComponent(document.getElementById('email').value);
+    let message = encodeURIComponent(document.getElementById('message').value);
 
-      const url = "https://wa.me/" + number  + "?text="
-      + "Name : " +name+  "%0a"
-      + "Email : " +email+ "%0a"
-      + "Message :" +message+ "%0a%0a"; 
+    // Build the WhatsApp URL
+    const url = "https://wa.me/" + number  + "?text="
+      + "Name: " + name + "%0a"
+      + "Email: " + email + "%0a"
+      + "Message: " + message + "%0a%0a"; 
 
-      window.open(url, 'blank').focus();
-    }
+    // Open WhatsApp in a new tab
+    window.open(url, '_blank');
+  }
   </script>
 
 
