@@ -20,6 +20,73 @@
     .carousel-caption {
         bottom: 20%;
     }
+
+    .fade-in {
+        animation: fadeIn 0.8s ease-in;
+    }
+    
+    .slide-in {
+        animation: slideIn 0.8s ease-out;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    @keyframes slideIn {
+        from { 
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 168, 116, 0.1) !important;
+    }
+
+    .nav-pills .nav-link {
+        color: #00A874;
+        border: 1px solid #00A874;
+        margin: 0 5px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-pills .nav-link.active {
+        background-color: #00A874;
+        color: white !important;
+    }
+
+    .nav-pills .nav-link:hover:not(.active) {
+        background-color: rgba(0, 168, 116, 0.1);
+    }
+
+    .card-body h5 {
+        color: #00A874;
+    }
+
+    .image-container img {
+        transition: transform 0.5s ease;
+    }
+
+    .image-container:hover img {
+        transform: scale(1.02);
+    }
+
+    .video-container {
+        border-radius: 8px;
+        overflow: hidden;
+        border: 2px solid rgba(0, 168, 116, 0.1);
+    }
 </style>
 
 <body>
@@ -106,15 +173,198 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <!-- recuitment section -->
-     
+   
+    <!-- youth day activities -->
+    <div class="container-fluid" style="background-color: #ffffff;">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center mb-5 fw-bold slide-in" style="color: #00A874;">
+                        Youth Day Celebration
+                        <div class="small text-muted mt-2">February 5, 2025</div>
+                    </h2>
+
+                    <!-- Event Description -->
+                    <div class="row mb-5">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="card shadow-sm fade-in">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-center mb-3" style="color: #00A874;">
+                                        <i class="bi bi-calendar3 me-2"></i>
+                                        <span>February 5, 2025</span>
+                                        <i class="bi bi-geo-alt ms-4 me-2"></i>
+                                        <span>INIESAT Campus</span>
+                                    </div>
+                                    <p class="lead">Celebrating the vibrant spirit of youth at INIESAT's Youth Day celebration. A day filled with cultural performances, sports activities, and memorable moments.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Media Gallery Tabs -->
+                    <ul class="nav nav-pills mb-4 justify-content-center fade-in" id="mediaTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="photos-tab" data-bs-toggle="pill" data-bs-target="#photos" type="button" role="tab">
+                                <i class="bi bi-images me-2"></i>Photos
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="videos-tab" data-bs-toggle="pill" data-bs-target="#videos" type="button" role="tab">
+                                <i class="bi bi-camera-video me-2"></i>Videos
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- Media Content -->
+                    <div class="tab-content" id="mediaTabContent">
+                        <!-- Photos Grid -->
+                        <div class="tab-pane fade show active" id="photos" role="tabpanel">
+                            <div class="row g-4">
+                                <!-- Large featured image -->
+                                <div class="col-md-8">
+                                    <div class="card shadow-sm h-100 slide-in" style="animation-delay: 0.1s">
+                                        <div class="image-container">
+                                            <img src="images/youthday/youth-day-hall1.jpg" class="img-fluid rounded w-100" 
+                                                 style="max-height: 500px; width: auto;" alt="Youth Day Main Event">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="mb-2">Opening Ceremony</h5>
+                                            <p class="text-muted mb-0">Beginning of the youth day</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Side images -->
+                                <div class="col-md-4">
+                                    <div class="row g-4">
+                                        <div class="col-12">
+                                            <div class="card shadow-sm slide-in" style="animation-delay: 0.2s">
+                                                <div class="image-container">
+                                                    <img src="images/youthday/youth-day-football.jpg" class="img-fluid rounded w-100" 
+                                                         style="max-height: 240px; width: auto;" alt="Youth Day Activity 1">
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="mb-2">Sports Event</h5>
+                                                    <p class="text-muted mb-0">Team photo with Staff Member</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="card shadow-sm slide-in" style="animation-delay: 0.3s">
+                                                <div class="image-container">
+                                                    <img src="images/youthday/youth-day-hall2.jpg" class="img-fluid rounded w-100" 
+                                                         style="max-height: 240px; width: auto;" alt="Youth Day Activity 2">
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="mb-2">Victory Celebration</h5>
+                                                    <p class="text-muted mb-0">Winning team</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Additional images in a grid -->
+                                <div class="col-md-4">
+                                    <div class="card shadow-sm h-100 slide-in" style="animation-delay: 0.4s">
+                                        <div class="image-container">
+                                            <img src="images/youthday/youth-day-hall3.jpg" class="img-fluid rounded w-100" 
+                                                 style="max-height: 300px; width: auto;" alt="Youth Day Gallery 1">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="mb-2">Award Ceremony</h5>
+                                            <p class="text-muted mb-0">Winning team with the HR</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card shadow-sm h-100 slide-in" style="animation-delay: 0.5s">
+                                        <div class="image-container">
+                                            <img src="images/youthday/youth-day-hall4.jpg" class="img-fluid rounded w-100" 
+                                                 style="max-height: 300px; width: auto;" alt="Youth Day Gallery 2">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="mb-2">Official Address</h5>
+                                            <p class="text-muted mb-0">Presentation by school authorities</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card shadow-sm h-100 slide-in" style="animation-delay: 0.6s">
+                                        <div class="image-container">
+                                            <img src="images/youthday/youth-day-hall5.jpg" class="img-fluid rounded w-100" 
+                                                 style="max-height: 300px; width: auto;" alt="Youth Day Gallery 3">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="mb-2">Prize Giving</h5>
+                                            <p class="text-muted mb-0">Winning team receiving the award</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Videos Grid -->
+                        <div class="tab-pane fade" id="videos" role="tabpanel">
+                            <div class="row g-4">
+                                <!-- Main Video -->
+                                <div class="col-lg-8">
+                                    <div class="card shadow-sm slide-in">
+                                        <div class="card-body p-4">
+                                            <h5 class="mb-3">Main Event Highlights</h5>
+                                            <div class="video-container position-relative" style="padding-top: 56.25%;">
+                                                <video class="position-absolute top-0 start-0 w-100 h-100 rounded" 
+                                                       controls 
+                                                       preload="none"
+                                                       poster="images/youthday/youth-day-hall1.jpg"
+                                                       style="object-fit: contain; background: #f8f9fa;">
+                                                    <source src="videos/youth-day-v2.mp4" type="video/mp4">
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                            </div>
+                                            <div class="mt-3">
+                                                <p class="text-muted mb-0">Main event highlights from the youth day celebration</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Side Videos -->
+                                <div class="col-lg-4">
+                                    <div class="row g-4">
+                                        <div class="col-12">
+                                            <div class="card shadow-sm slide-in" style="animation-delay: 0.2s">
+                                                <div class="card-body p-4">
+                                                    <h5 class="mb-3">Cultural Performance</h5>
+                                                    <div class="video-container position-relative" style="padding-top: 56.25%;">
+                                                        <video class="position-absolute top-0 start-0 w-100 h-100 rounded" 
+                                                               controls 
+                                                               preload="none"
+                                                               poster="images/youthday/youth-day-hall2.jpg"
+                                                               style="object-fit: contain; background: #f8f9fa;">
+                                                            <source src="videos/youth-day-dance.mp4" type="video/mp4">
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                    </div>
+                                                    <div class="mt-3">
+                                                        <p class="text-muted mb-0">Cultural performance by the cheerleaders</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- matriculation ceremony -->
     <div class="container-fluid" style="background-color: #f8f9fa;">
         <div class="container py-5">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="text-center mb-5 fw-bold matriculation-title" style="color: #00A874;">
+                    <h2 class="text-center mb-5 fw-bold" style="color: #00A874;">
                         2024 Matriculation Ceremony
                     </h2>
                     <!-- Main Event Card -->
@@ -374,7 +624,7 @@
             console.log("Current page:", currentPage); // For debugging
         });
     </script>
-
+     <!-- bootstrap scripts cdn -->
     <!-- Add defer attribute to the external scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"

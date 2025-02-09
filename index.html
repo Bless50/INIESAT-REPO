@@ -44,6 +44,28 @@
     color: #00A874 !important;
     font-weight: bold;
   }
+  .feature-item {
+    display: flex;
+    align-items: start;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-item:hover {
+    transform: translateX(10px);
+  }
+  
+  .feature-icon {
+    font-size: 1.5rem;
+    color: #00A874;
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+  
+  .feature-text {
+    margin: 0;
+    color: #444;
+  }
 </style>
 
 <body>
@@ -292,22 +314,55 @@
       <h2 class="text-center fw-bold" id="chooseUsHeading">Why Choose Us</h2>
       <div class="row g-5 text-lead" id="marginUnderList">
         <div class="col-lg-6 col-md-12">
-          <ul class="text-md-start ">
-            <li>Free computer training at the beginning of the school year</li>
-            <li>Free chromebook for students who pay their complete fees at once</li>
-            <li>Partnership with Montana Technological University USA</li>
-            <li>Equipped laboratory and library on campus</li>
-            <li>Free transportation to school</li>
+          <ul class="list-unstyled px-lg-5 mx-lg-5">
+            <li class="feature-item">
+              <i class="bi bi-building-check feature-icon"></i>
+              <span class="feature-text">Mother university: University of Douala</span>
+            </li>
+            <li class="feature-item">
+              <i class="bi bi-car-front feature-icon"></i>
+              <span class="feature-text">Free driving lessons for degree students</span>
+            </li>
+            <li class="feature-item">
+              <i class="bi bi-award feature-icon"></i>
+              <span class="feature-text">Mega scholarships available</span>
+            </li>
+            <li class="feature-item">
+              <i class="bi bi-tools feature-icon"></i>
+              <span class="feature-text">Onsite training for our students</span>
+            </li>
+            <li class="feature-item">
+              <i class="bi bi-wifi feature-icon"></i>
+              <span class="feature-text">Free WIFI on campus</span>
+            </li>
+            <li class="feature-item">
+              <i class="bi bi-patch-check feature-icon"></i>
+              <span class="feature-text">Permanent Authorization</span>
+            </li>
           </ul>
         </div>
         <div class="col-lg-6 col-md-12">
-          <ul class="px-lg-5 mx-lg-5 text-md-start ">
-            <li>Mother university: University of Douala</li>
-            <li>Free driving lessons for degree students</li>
-            <li>Mega scholarships available</li>
-            <li>Onsite training for our students</li>
-            <li>Free WIFI on campus</li>
-            <li>Permenant Authorisation</li>
+          <ul class="list-unstyled px-lg-5 mx-lg-5">
+            <li class="feature-item">
+              <i class="bi bi-pc-display feature-icon"></i>
+              <span class="feature-text">Free computer training at the beginning of the school year</span>
+            </li>
+            <li class="feature-item">
+              <i class="bi bi-laptop feature-icon"></i>
+              <span class="feature-text">Free chromebook for students who pay their complete fees at once</span>
+            </li>
+            <li class="feature-item">
+              <i class="bi bi-globe-americas feature-icon"></i>
+              <span class="feature-text">Partnership with Montana Technological University USA</span>
+            </li>
+            <li class="feature-item">
+              <i class="bi bi-building-gear feature-icon"></i>
+              <span class="feature-text">Equipped laboratory and library on campus</span>
+            </li>
+            <li class="feature-item">
+              <i class="bi bi-bus-front feature-icon"></i>
+              <span class="feature-text">Free transportation to school</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -539,7 +594,7 @@
               class="bi bi-house-check-fill mb-2" viewBox="0 0 16 16">
               <path
                 d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z" />
-              <path d="m8 3.293 4.712 4.712A4.5 4.5 0 0 0 8.758 15H3.5A1.5 1.5 0 0 1 2 13.5V9.293z" />
+              <path d="M8 3.293 4.712 8.292A4.5 4.5 0 0 0 8.758 15H3.5A1.5 1.5 0 0 1 2 13.5V9.293z" />
               <path
                 d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.707l.547.547 1.17-1.951a.5.5 0 1 1 .858.514" />
             </svg>
